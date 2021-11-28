@@ -1,0 +1,112 @@
+.generalContainer {
+  display: grid;
+  grid-template-columns: 1fr 100vh 1fr;
+}
+
+.form {
+  grid-column: 2;
+}
+
+.container {
+  padding-top: 1.5rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.containerBody {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+}
+
+.containerBody h2 {
+  margin-bottom: 0.3rem;
+}
+
+.containerBody h3 {
+  margin-top: 1rem;
+}
+
+.containerBody ul {
+  padding-top: 0.8rem;
+}
+
+.containerBody li {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  color: var(--primary-light);
+  font-weight: 400;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+  list-style-type: none;
+  list-style: none;
+}
+
+.containerBody li:hover,
+.containerBody li:focus {
+  outline: none;
+  background-color: var(--secondary-light);
+  box-shadow: 0 0 0 1px var(--secondary-light), 0 0 0 1px var(--secondary-dark);
+}
+
+.containerBody p:nth-of-type(1) {
+  padding-bottom: 1rem;
+}
+
+.containerBody .description {
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.containerBody .code {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.btns {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  justify-content: space-around;
+}
+
+.newExercise {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding-top: 0.1rem;
+}
+
+.review label {
+  padding-bottom: 1.5rem;
+}
+
+.btnUD {
+  grid-column: 2;
+  margin-left: 3px;
+  padding-top: 6px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: 0.2px solid black;
+  border-radius: 0.2rem;
+}
+
+.btnUD:nth-of-type(2) {
+  background-color: red;
+}
+
+.btnUD::after,
+.btnUD:hover {
+  background-color: var(--secondary-light);
+  cursor: pointer;
+}

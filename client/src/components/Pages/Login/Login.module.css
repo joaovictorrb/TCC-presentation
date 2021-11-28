@@ -1,0 +1,103 @@
+.generalContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.generalContainer::before {
+  display: block;
+  content: '';
+  background: url('../../../Assets/login.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.forms {
+  max-width: 35rem;
+  padding: 1rem;
+}
+
+.title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  text-align: left;
+  padding: 1rem 1rem 1.5rem 0rem;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  background: var(--secondary-light);
+  height: 0.2rem;
+  width: 85%;
+  border-radius: 0.2rem;
+}
+
+.subTitle {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.subTitle::after {
+  content: '';
+  display: block;
+  background: var(--secondary-light);
+  height: 0.2rem;
+  width: 75%;
+  border-radius: 0.2rem;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.register {
+  margin-top: 4rem;
+}
+
+.register p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.selectType {
+  display: block;
+  font-family: var(--type-second);
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  background: var(--primary-light);
+}
+
+.selectType:focus,
+.selectType:hover {
+  outline: none;
+  border-color: var(--primary-light);
+  background: var(--primary-dark);
+  box-shadow: 0 0 0 3px var(--secondary-light);
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 40rem) {
+  .generalContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .generalContainer::before {
+    display: none;
+  }
+  .forms {
+    max-width: 100%;
+  }
+}

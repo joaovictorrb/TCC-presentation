@@ -1,0 +1,136 @@
+.header {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--secondary);
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.menu {
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+}
+
+.login {
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.login::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('../../Assets/user.svg') no-repeat;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
+}
+
+.divMobileBtn {
+  right: 10px;
+  top: 5px;
+}
+
+.mobileBtn {
+  margin: 1rem;
+  justify-content: flex-end;
+  background: var(--secondary);
+  border-radius: 0.2rem;
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.15rem solid var(--primary-dark);
+  transition: 0.1s;
+  cursor: pointer;
+  float: right;
+}
+
+.mobileBtn::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  background: var(--primary-dark);
+  border-radius: 2px;
+  /* lines of the hamburguer menu */
+  box-shadow: 0px 6px var(--primary-dark), 0px -6px var(--primary-dark);
+}
+
+.mobileBtn:focus,
+.mobileBtn:hover,
+.mobileBtnActive {
+  outline: none;
+  background: var(--secondary-light);
+  box-shadow: 0 0 0 1px var(--secondary-light);
+  border-color: var(--secondary-light);
+}
+
+.navMobile {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  padding: 0 1rem;
+  background: var(--secondary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
+.navMobile a,
+.navMobile button {
+  display: flex;
+  align-items: center;
+  background: var(--secondary);
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--primary-light);
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.navMobile a:last-child {
+  border-bottom: none;
+}
+
+.exit {
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.exit::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
+}

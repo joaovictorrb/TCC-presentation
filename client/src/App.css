@@ -1,0 +1,123 @@
+:root {
+  --text-color: #333;
+  --light-text: #666;
+  --primary: #ededed;
+  --primary-light: #ffffff;
+  --primary-dark: #d7e2ef;
+  --secondary: #13437e;
+  --secondary-light: #0e878a;
+  --secondary-dark: #180e8a;
+  --error: tomato;
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: georgia;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 4rem;
+  background-color: var(--primary);
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--type-first);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  /* margin 0 auto === align to center */
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* .title::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--secondary-light);
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+} */
+
+.animationLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animationLeft 0.3s forwards;
+}
+
+@keyframes animationLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--secondary);
+}

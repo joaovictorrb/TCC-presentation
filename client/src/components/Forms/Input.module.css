@@ -1,0 +1,46 @@
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.input {
+  border: 1px solid var(--secondary-light);
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background: var(--primary-light);
+  transition: 0.2s;
+  resize: none;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  border-color: var(--primary-light);
+  background: var(--primary-dark);
+  box-shadow: 0 0 0 3px var(--secondary-light);
+}
+
+.input[disabled] {
+  background-color: var(--primary);
+}
+.input[disabled]:hover,
+.input[disabled]:focus {
+  border: 1px solid var(--secondary-light);
+  box-shadow: none;
+  background: var(--primary);
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
